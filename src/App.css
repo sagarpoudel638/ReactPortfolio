@@ -8,7 +8,7 @@ html {
   box-sizing: border-box;
 }
 :root {
-  --mainbackgroundcolor: #c2c0c0;
+  --mainbackgroundcolor: #cbc3cc;
   --primarycolor: 102, 106, 172;
   --primaryfont: Montserrat;
   --secondaryfont: Mogra;
@@ -62,9 +62,11 @@ ul {
   margin-left: 30%;
 }
 
-/* Base styles for larger screens */
+
 .intro {
   margin-top: 4%;
+  /* display: flex; */
+  /* justify-content: space-between; */
   width: 1190px;
   height: 320px;
   margin-left: 11%;
@@ -100,11 +102,11 @@ ul {
 }
 
 .intro-pic img {
-  height: 400px;
-  width: auto;
+  height: 300px; 
+   width: auto;
   z-index: 1;
   position: absolute;
-  margin-left: 70%;
+  margin-left: 60%;
 }
 
 .download-btn {
@@ -293,6 +295,7 @@ ul {
 }
 
 footer {
+  margin: 0;
   background-color: black;
   display: flex;
   justify-content: space-evenly;
@@ -477,6 +480,7 @@ footer .title {
   .intro-pic img {
     height: 250px; /* Resize image for medium screens */
     width: auto;
+    display: none;
     right: 0; /* Adjust positioning for medium screens */
     left: 0; /* Center image horizontally */
     top: 20%; /* Adjust vertical positioning */
@@ -640,6 +644,7 @@ footer .title {
     width: auto;
     right: 0; /* Center image horizontally */
     left: 0;
+    display: none;
     top: 30%; /* Adjust vertical positioning */
   }
   .download-btn {
