@@ -1,38 +1,743 @@
-.App {
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --mainbackgroundcolor: #c2c0c0;
+  --primarycolor: 102, 106, 172;
+  --primaryfont: Montserrat;
+  --secondaryfont: Mogra;
+  --lightcolor: white;
+  --secondarycolor: 204, 200, 102;
+}
+.mainbodywrapper {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.wrapper {
+  background-color: var(--mainbackgroundcolor);
+  height: auto;
+  width: 100vw;
+}
+header {
+  background-color: rgba(var(--primarycolor));
+  width: 100%;
+  /* max-width: 1200px; */
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5%;
+  gap: 40%;
+  align-items: baseline;
+  /* position: fixed; */
+}
+a {
+  text-decoration: none;
+  color: var(--lightcolor);
+  font-family: var(--primaryfont);
+  font-size: 32px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.logo h2 {
+  font-family: var(--secondaryfont);
+  color: var(--lightcolor);
+  font-size: 48px;
+  margin-top: 50%;
+  margin-left: 30%;
+}
+
+/* Base styles for larger screens */
+.intro {
+  margin-top: 4%;
+  width: 1190px;
+  height: 320px;
+  margin-left: 11%;
+  background-color: rgba(var(--secondarycolor));
+  padding-top: 2%;
+}
+
+.intro-im {
+  color: #3c3737;
+  margin-left: 0%;
+  font-family: var(--secondaryfont);
+  font-size: 34px;
+}
+
+.intro-name {
+  color: rgba(var(--primarycolor));
+  font-family: var(--secondaryfont);
+  font-size: 40px;
+  margin-left: 5%;
+  width: 100%;
+}
+
+.intro-dev {
+  color: #272525;
+  font-family: var(--secondaryfont);
+  font-size: 48px;
+  font-weight: bold;
+  margin-left: 15%;
+}
+
+.intro-button {
+  margin-left: 5%;
+}
+
+.intro-pic img {
+  height: 400px;
+  width: auto;
+  z-index: 1;
+  position: absolute;
+  margin-left: 70%;
+}
+
+.download-btn {
+  background-color: rgba(var(--primarycolor));
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #5a5b9c;
+}
+
+.banner {
+  margin-top: 4%;
+  width: 1190px;
+  height: 109px;
+  margin-left: 11%;
+  border-radius: 90px;
+  background-color: rgba(var(--primarycolor), 0.22);
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.banner .content {
+  font-family: var(--primaryfont);
+  font-size: 28px;
+}
+
+.banner .vertical-line {
+  width: 1px;
+  height: 100px;
+  background-color: #666aac;
+  margin: 0 auto;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10%;
+  justify-content: space-evenly;
+}
+.skills img {
+  height: 70px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--primaryfont);
+  font-size: 48px;
+  padding-top: 5%;
+  font-weight: 700;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.project .works-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 20px;
+  padding-left: 5%;
+  padding-top: 5%;
+  width: 100%;
+  justify-content: center;
+}
+.works-container .work {
+  height: 512px;
+  width: 400px;
+  background-color: rgba(var(--primarycolor), 0.16);
+  font-size: 36px;
+  text-align: center;
+  align-content: center;
+  border-radius: 1%;
+  border-style: dashed;
+  border: 2px solid rgba(var(--primarycolor), 0.83);
+  box-shadow: 10px 10px 15px rgba(var(--primarycolor), 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.about {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 600px;
+  background-color: rgba(var(--secondarycolor));
+}
+
+.image-detail {
+  display: flex;
+
+  padding-top: 3%;
+  padding-left: 10%;
+}
+
+.image-detail img {
+  height: 400px;
+  width: auto;
+
+  padding-left: 0%;
+}
+.details {
+  margin-left: 10%;
+}
+
+.image-detail .name {
+  color: rgba(var(--primarycolor));
+  font-family: var(--secondaryfont);
+  font-size: 40px;
+  margin-left: 5%;
+  width: 100%;
+}
+
+.image-detail .summary {
+  font-size: 20px;
+  font-family: var(--primaryfont);
+  width: 500px;
+  text-align: justify;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 5%;
+}
+
+.social-icons img {
+  height: 70px;
+}
+
+.email {
+  margin-top: 4%;
+  width: 890px;
+  height: 109px;
+  margin-left: 20%;
+  border-radius: 90px;
+  background-color: rgba(var(--secondarycolor), 0.5);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 5%;
+}
+.email .content {
+  font-family: var(--primaryfont);
+  font-size: 28px;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.email .send {
+  height: 50px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.top {
+  height: 100px;
+  cursor: pointer;
+  text-align: right;
+
+  width: auto;
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+footer .title {
+  color: var(--lightcolor);
+}
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.social-links .content {
+  color: var(--lightcolor);
+  font-family: var(--primaryfont);
+  font-size: 28px;
+}
+
+.links .content {
+  color: var(--lightcolor);
+  font-family: var(--primaryfont);
+  font-size: 28px;
+}
+
+/* Large screens (desktops and large tablets) */
+@media (min-width: 1200px) {
+  .mainbodywrapper {
+    padding-left: 2%;
+    padding-right: 2%;
   }
-  to {
-    transform: rotate(360deg);
+  .intro {
+    width: 1200px; /* Increase width for very large screens */
+    height: 350px; /* Adjust height if needed */
+    margin-left: auto; /* Center align horizontally */
+    margin-right: auto; /* Center align horizontally */
+  }
+
+  .intro-im {
+    font-size: 36px; /* Slightly larger font size */
+  }
+
+  .intro-name {
+    font-size: 44px; /* Slightly larger font size */
+  }
+
+  .intro-dev {
+    font-size: 52px; /* Slightly larger font size */
+  }
+
+  .intro-button {
+    margin-left: 8%; /* Adjust margin if needed */
+  }
+
+  .intro-pic img {
+    height: 420px; /* Slightly larger image */
+  }
+
+  /* .banner section adjustments */
+  .banner {
+    width: 1200px; /* Increase width */
+    height: 120px; /* Adjust height */
+    margin-left: auto; /* Center align horizontally */
+    margin-right: auto; /* Center align horizontally */
+    border-radius: 100px; /* Increase border-radius for larger screens */
+  }
+
+  .banner .content {
+    font-size: 32px; /* Increase font size */
+  }
+
+  .banner .vertical-line {
+    height: 120px; /* Adjust height of vertical line */
+  }
+
+  /* .about section adjustments */
+  .about {
+    height: 700px; /* Increase height if needed */
+  }
+
+  .image-detail img {
+    height: 450px; /* Increase image height */
+  }
+
+  .details {
+    margin-left: 15%; /* Adjust margin for better spacing */
+  }
+
+  .image-detail .name {
+    font-size: 44px; /* Increase font size */
+  }
+
+  .image-detail .summary {
+    font-size: 22px; /* Increase font size */
+    width: 550px; /* Increase width */
+  }
+
+  /* .contact section adjustments */
+  .contact {
+    width: 1200px; /* Increase width */
+    margin-left: auto; /* Center align horizontally */
+    margin-right: auto; /* Center align horizontally */
+  }
+
+  .social-icons img {
+    height: 80px; /* Increase icon size */
+  }
+
+  .email {
+    width: 1000px; /* Increase width */
+    height: 120px; /* Adjust height */
+    margin-left: auto; /* Center align horizontally */
+    margin-right: auto; /* Center align horizontally */
+  }
+
+  .email .content {
+    font-size: 30px; /* Increase font size */
+  }
+
+  .email .send {
+    height: 60px; /* Increase send icon size */
+  }
+
+  footer {
+    justify-content: space-evenly; /* Space out sections evenly */
+    padding: 20px 40px; /* Increase padding for large screens */
+  }
+
+  .social-links, .links {
+    text-align: center;
+    gap: 15px; /* Increase gap between items */
+  }
+
+  footer .title {
+    font-size: 26px; /* Increase font size */
+  }
+
+  .social-links a, .links a {
+    font-size: 20px; /* Increase font size for links */
   }
 }
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .intro {
+    width: 90%;
+    margin-left: 5%;
+    height: auto;
+    padding-top: 5%;
+  }
+
+  .intro-im,
+  .intro-name,
+  .intro-dev {
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .intro-name {
+    font-size: 32px;
+  }
+
+  .intro-dev {
+    font-size: 36px;
+    margin-left: 0;
+  }
+
+  .intro-button {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .intro-pic img {
+    height: 250px; /* Resize image for medium screens */
+    width: auto;
+    right: 0; /* Adjust positioning for medium screens */
+    left: 0; /* Center image horizontally */
+    top: 20%; /* Adjust vertical positioning */
+  }
+
+  .download-btn {
+    padding: 12px 24px;
+  }
+  .banner {
+    width: 90%;
+    margin-left: 5%;
+    height: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 60px;
+    gap: 10px; /* Increase gap between elements for better spacing */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .banner .content {
+    font-size: 24px; /* Reduce font size for medium screens */
+  }
+
+  .banner .vertical-line {
+    display: none; /* Hide vertical lines on medium screens */
+  }
+
+  .about {
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .image-detail {
+    flex-direction: column;
+    padding-left: 5%; /* Reduce padding */
+    align-items: center; /* Center align items */
+  }
+
+  .image-detail img {
+    height: 300px; /* Resize image for medium screens */
+    width: auto;
+    margin-bottom: 20px; /* Add margin below the image */
+  }
+
+  .details {
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center align text */
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .image-detail .name {
+    font-size: 32px; /* Reduce font size */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .image-detail .summary {
+    font-size: 18px; /* Reduce font size */
+    width: 100%; /* Full width for smaller screens */
+    text-align: center; /* Center align text */
+  }
+
+  .social-icons {
+    flex-direction: row; /* Ensure icons are in a row */
+    gap: 10px; /* Add gap between icons */
+    padding-top: 3%; /* Adjust padding */
+  }
+
+  .social-icons img {
+    height: 50px; /* Resize icons for medium screens */
+  }
+
+  .email {
+    width: 80%; /* Reduce width for smaller screens */
+    margin-left: 10%; /* Center align */
+    height: auto; /* Adjust height */
+    padding: 5% 2%; /* Adjust padding */
+    text-align: center; /* Center align text */
+  }
+
+  .email .content {
+    font-size: 24px; /* Reduce font size */
+  }
+
+  .email .send {
+    height: 40px; /* Resize send icon */
+  }
+
+  footer {
+    flex-direction: column; /* Stack footer sections vertically */
+    align-items: center; /* Center align items */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .social-links, .links {
+    text-align: center; /* Center align text */
+    width: 100%; /* Full width */
+    margin-bottom: 10px; /* Add space between sections */
+  }
+
+  footer .title {
+    font-size: 20px; /* Adjust font size */
+  }
+
+  .social-links a, .links a {
+    font-size: 16px; /* Adjust font size for links */
+  }
+}
+
+
+/* Small screens (mobile devices and small tablets) */
+@media (max-width: 600px) {
+  .mainbodywrapper {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  header {
+    gap: 50%;
+  }
+
+  .menu ul {
+    /* Adjustments for menu on small screens */
+    flex-direction: column;
+    gap: 10px;
+  }
+  a {
+    font-size: 20px;
+  }
+  .logo h2 {
+    /* Adjustments for logo on small screens */
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .intro {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 10%;
+    text-align: center;
+  }
+
+  .intro-im,
+  .intro-name,
+  .intro-dev {
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .intro-name {
+    font-size: 28px;
+  }
+
+  .intro-dev {
+    font-size: 30px;
+  }
+
+  .intro-button {
+    margin-left: 0;
+  }
+  .intro-pic img {
+    height: 200px; /* Further resize image for small screens */
+    width: auto;
+    right: 0; /* Center image horizontally */
+    left: 0;
+    top: 30%; /* Adjust vertical positioning */
+  }
+  .download-btn {
+    padding: 15px 30px;
+  }
+
+  .banner {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 30px;
+    gap: 5px; /* Adjust gap between elements for small screens */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .banner .content {
+    font-size: 20px; /* Further reduce font size for small screens */
+  }
+
+  .banner .vertical-line {
+    display: none; /* Hide vertical lines on small screens */
+  }
+
+  .about {
+    padding: 10px; /* Add padding for small screens */
+    height: auto; /* Remove fixed height */
+  }
+
+  .image-detail {
+    padding-left: 0; /* Remove padding */
+    align-items: center; /* Center align items */
+  }
+
+  .image-detail img {
+    height: 200px; /* Further resize image for small screens */
+    width: auto;
+    margin-bottom: 10px; /* Adjust margin below the image */
+  }
+
+  .details {
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center align text */
+    width: 100%; /* Full width */
+  }
+
+  .image-detail .name {
+    font-size: 28px; /* Further reduce font size */
+  }
+
+  .image-detail .summary {
+    font-size: 16px; /* Further reduce font size */
+    width: 100%; /* Full width */
+    text-align: center; /* Center align text */
+  }
+  .social-icons {
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center align icons */
+    padding-top: 2%; /* Adjust padding */
+  }
+
+  .social-icons img {
+    height: 40px; /* Further reduce icon size */
+    margin-bottom: 10px; /* Add margin between icons */
+  }
+
+  .email {
+    width: 100%; /* Full width */
+    margin-left: 0; /* Remove left margin */
+    height: auto; /* Remove fixed height */
+    padding: 5% 2%; /* Adjust padding */
+    text-align: center; /* Center align text */
+  }
+
+  .email .content {
+    font-size: 20px; /* Further reduce font size */
+  }
+
+  .email .send {
+    height: 30px; /* Further resize send icon */
+  }
+  footer {
+    padding: 10px; /* Adjust padding */
+  }
+
+  .social-links, .links {
+    text-align: center; /* Center align text */
+    width: 100%; /* Full width */
+  }
+
+  footer .title {
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .social-links a, .links a {
+    font-size: 14px; /* Adjust font size for links */
+  }
+}
+
+/* Add other small-screen specific styles here */
