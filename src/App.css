@@ -8,12 +8,12 @@ html {
   box-sizing: border-box;
 }
 :root {
-  --mainbackgroundcolor: #cbc3cc;
-  --primarycolor: 102, 106, 172;
+  --mainbackgroundcolor: #f4f4f9;
+  --primarycolor:#1f7cec;
   --primaryfont: Montserrat;
   --secondaryfont: Mogra;
-  --lightcolor: white;
-  --secondarycolor: 204, 200, 102;
+  --lightcolor: #F9FAFB;
+  --secondarycolor: #fff;
 }
 .mainbodywrapper {
   padding-left: 2%;
@@ -25,7 +25,7 @@ html {
   width: 100vw;
 }
 header {
-  background-color: rgba(var(--primarycolor));
+  background-color: var(--primarycolor);
   width: 100%;
   /* max-width: 1200px; */
   height: auto;
@@ -41,6 +41,10 @@ a {
   color: var(--lightcolor);
   font-family: var(--primaryfont);
   font-size: 32px;
+}
+a:hover{
+  color: #66E7EC;
+
 }
 ul {
   list-style-type: none;
@@ -70,7 +74,7 @@ ul {
   width: 1190px;
   height: 320px;
   margin-left: 11%;
-  background-color: rgba(var(--secondarycolor));
+  background-color: var(--secondarycolor);
   padding-top: 2%;
 }
 
@@ -82,7 +86,7 @@ ul {
 }
 
 .intro-name {
-  color: rgba(var(--primarycolor));
+  color: var(--primarycolor);
   font-family: var(--secondaryfont);
   font-size: 40px;
   margin-left: 5%;
@@ -110,7 +114,7 @@ ul {
 }
 
 .download-btn {
-  background-color: rgba(var(--primarycolor));
+  background-color: var(--primarycolor);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -121,7 +125,7 @@ ul {
 }
 
 .download-btn:hover {
-  background-color: #5a5b9c;
+  background-color: #FF6F61;
 }
 
 .banner {
@@ -130,7 +134,7 @@ ul {
   height: 109px;
   margin-left: 11%;
   border-radius: 90px;
-  background-color: rgba(var(--primarycolor), 0.22);
+  background-color:var(--secondarycolor);
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
@@ -146,7 +150,7 @@ ul {
 .banner .vertical-line {
   width: 1px;
   height: 100px;
-  background-color: #666aac;
+  background-color: #66E7EC;
   margin: 0 auto;
 }
 
@@ -193,14 +197,14 @@ ul {
 .works-container .work {
   height: 512px;
   width: 400px;
-  background-color: rgba(var(--primarycolor), 0.16);
+  background-color: var(--primarycolor);
   font-size: 36px;
   text-align: center;
   align-content: center;
   border-radius: 1%;
   border-style: dashed;
-  border: 2px solid rgba(var(--primarycolor), 0.83);
-  box-shadow: 10px 10px 15px rgba(var(--primarycolor), 0.3);
+  border: 2px solid #D3DCE6;
+  box-shadow: 10px 10px 15px #D3DCE6;
 }
 
 .about {
@@ -209,7 +213,7 @@ ul {
   flex-wrap: wrap;
   width: 100%;
   height: 600px;
-  background-color: rgba(var(--secondarycolor));
+  background-color: var(--secondarycolor);
 }
 
 .image-detail {
@@ -230,7 +234,7 @@ ul {
 }
 
 .image-detail .name {
-  color: rgba(var(--primarycolor));
+  color: var(--primarycolor);
   font-family: var(--secondaryfont);
   font-size: 40px;
   margin-left: 5%;
@@ -266,7 +270,7 @@ ul {
   height: 109px;
   margin-left: 20%;
   border-radius: 90px;
-  background-color: rgba(var(--secondarycolor), 0.5);
+  background-color: var(--secondarycolor);
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
